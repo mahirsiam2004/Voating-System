@@ -28,18 +28,22 @@ int main()
 
     do
     {
-        //system("cls");
-        // system("COLOR 0");
-    printf("======================================================\n");
+        //banner part
+        const char *BLUE = "\033[1;34m";
+    const char *PURPLE = "\033[1;35m";
+    const char *RESET = "\033[0m";
+
+    printf("%s======================================================\n", BLUE);
     printf("=                                                    =\n");
-    printf("=   WELCOME TO Class REPRESENTATIVE ELECTION SYSTEM  =\n");
+    printf("=   %sWELCOME TO Class REPRESENTATIVE ELECTION SYSTEM%s  =\n", PURPLE, BLUE);
     printf("=                                                    =\n");
-    printf("=            Developed by Team:                      =\n");
+    printf("=            %sDeveloped by Team:%s                      %s=\n", PURPLE, RESET, BLUE);
     printf("=           Mahir, Shafayet, Abdullah, Rafi          =\n");
     printf("=                                                    =\n");
     printf("======================================================\n");
-    printf("               C PROJECT IMPLEMENTATION              \n");
-    printf("======================================================\n\n\n");
+    printf("               %sC PROJECT IMPLEMENTATION%s              %s\n", PURPLE, RESET, BLUE);
+    printf("======================================================\n\n\n%s", RESET);
+
         printf("\n 1. Give your vote according to your preference.");
         printf("\n 2. Vote Count.");
         printf("\n 3. Show us who is the leading one.");
@@ -224,7 +228,7 @@ int main()
 
             else
             {
-                printf("wrong username or password");
+                 printf("\033[1;31m\n \n Sorry !!! You can't access admin pannel for pressing Wrong username or password\n \n\033[0m");
             }
         }
         break;
@@ -243,7 +247,8 @@ int main()
 
             else
             {
-                printf("wrong username or password");
+                 printf("\033[1;31m\n \n Sorry !!! You can't access admin pannel for pressing Wrong username or password\n \n\033[0m");
+
             }
         }
 
@@ -254,7 +259,8 @@ int main()
             declarewinner();
             break;
         default:
-            printf("Invalid choice. Please choose a valid option.\n");
+             printf("\033[1;31m\n \n Invalid choice. Please choose a valid option.\n \n\033[0m");
+
         }
     }
     while (choice != 0);
@@ -279,7 +285,10 @@ void giveyourvote(int userIndex)
     if (userIndex >= 0 && !hasVoted[userIndex])
     {
         hasVoted[userIndex] = 1;
-        printf("\n\n *Choose your preferred participant.* \n\n");
+        printf("\033[1;35m\n\n********************************************\n");
+        printf("     Choose Your Preferred Participant!    \n");
+        printf("********************************************\033[0m\n\n");
+
         printf("\n 1.%s\n 2.%s\n 3.%s\n 4.%s\n", PARTICIPANT1, PARTICIPANT2, PARTICIPANT3, PARTICIPANT4);
         printf("\n Input your choice (1-4): ");
         int choice;
@@ -302,10 +311,16 @@ void giveyourvote(int userIndex)
         default:
             unnecessaryvote++;
         }
-        printf("\033[1;32m\n \n Your vote is successfully submitted \n \n\033[0m");
+
+        printf("\033[1;32m\n\n***************************************\n");
+        printf("     Your vote has been recorded!    \n");
+        printf("***************************************\033[0m\n\n");
+
 
         printf("\n\n ****We do appreciate your vote.****\n\n");
+         getch();
         saveVoteCounts();
+
     }
     else
     {
