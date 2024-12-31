@@ -1,1 +1,30 @@
-1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+29
+mahir 323 1
+abdullah 324 0
+shafayet 349 0
+nishad 325 0
+minhaz 354 0
+arefin 347 0
+maliha 444 0
+shawon 357 0
+rafi 359 0
+theo 352 0
+touhid 345 0
+fikrat 328 0
+shahriar 408 0
+mahzilur 358 0
+john 331 0
+shaon 333 0
+redowan 335 0
+hakim 360 0
+rahul 340 0
+nur 353 0
+mimiya 339 0
+saif 361 0
+dristy 343 0
+ayesha 351 0
+jannatul 108 0
+niju 97 0
+Eva 330 0
+mariya 110 0
+khairul 123 0

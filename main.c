@@ -71,7 +71,12 @@ int main() {
         printf(" 2. User\n");
         printf(" 0. Exit\n");
         printf("Choose an option: ");
-        scanf("%d", &choice);
+ if (scanf("%d", &choice) != 1) {
+            // If the input is not an integer, clear the input buffer
+            printf("\n\nInvalid input. Please enter a valid number.\n\n");
+            while(getchar() != '\n'); // Clear the buffer
+            continue;
+        }
 
         switch (choice) {
             case 1:
@@ -98,7 +103,12 @@ int main() {
                             printf(" 2. Show Winner\n");
                             printf(" 0. Back\n");
                             printf("Choose an option: ");
-                            scanf("%d", &userChoice);
+           if (scanf("%d", &userChoice) != 1) {
+            // If the input is not an integer, clear the input buffer
+            printf("\n\nInvalid input. Please enter a valid number.\n\n");
+            while(getchar() != '\n'); // Clear the buffer
+            continue;
+        }
 
                             switch (userChoice) {
                                 case 1:
@@ -149,6 +159,7 @@ int main() {
                 printf("\033[1;33m               Have a Wonderful and Bright Future!         \033[0m\n");
                 printf("\033[1;35m===========================================================\033[0m\n");
                 break;
+
             default:
                 printf("\033[1;31m\nInvalid choice. Please choose a valid option.\033[0m\n");
         }
@@ -168,6 +179,7 @@ void adminPanel() {
     scanf("%d", &adminPass);
 
     if (strcmp(adminUser, "admin") == 0 && adminPass == 123) {
+            system("cls");
         // Fancy Welcome Message for Admin
         printf("\033[1;36m\n===========================================\033[0m\n");
         printf("\033[1;32m          Welcome, %s! Access Granted.       \033[0m\n", adminUser);
@@ -175,14 +187,19 @@ void adminPanel() {
 
         int adminChoice;
         do {
-            //system("cls");
             printf("\n 1. Manage Users\n");
             printf(" 2. Manage Candidates\n");
             printf(" 3. Show Vote Count\n");
             printf(" 4. Show Leading Candidate\n");
             printf(" 0. Back\n");
             printf("Choose an option: ");
-            scanf("%d", &adminChoice);
+            if (scanf("%d", &adminChoice) != 1) {
+            // If the input is not an integer, clear the input buffer
+            printf("\n\nInvalid input. Please enter a valid number.\n\n");
+            while(getchar() != '\n'); // Clear the buffer
+            continue;
+        }
+
 
             switch (adminChoice) {
                 case 1:
@@ -219,7 +236,12 @@ void manageUsers() {
         printf(" 3. Reset User Password\n");
         printf(" 0. Back\n");
         printf("Choose an option: ");
-        scanf("%d", &choice);
+ if (scanf("%d", &choice) != 1) {
+            // If the input is not an integer, clear the input buffer
+            printf("Invalid input. Please enter a valid number.\n");
+            while(getchar() != '\n'); // Clear the buffer
+            continue;
+        }
 
         switch (choice) {
             case 1:
