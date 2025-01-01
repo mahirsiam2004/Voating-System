@@ -276,6 +276,7 @@ void addUser() {
     for (int i = 0; i < userCount; i++) {
         if (strcmp(users[i].username, username) == 0) {
             printf("\033[1;31m\nUsername already exists. Please choose a different username.\033[0m\n");
+            getch();
             return;
         }
     }
